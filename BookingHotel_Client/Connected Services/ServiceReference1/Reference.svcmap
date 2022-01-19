@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8372a8fe-1654-4ee9-be10-67b851f1b52b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8888/BookingHotel" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BookingHotel.xsd" MetadataType="Schema" ID="0532bbda-84f1-4d50-ba6c-40cc776fedd2" SourceId="1" SourceUrl="http://localhost:8888/BookingHotel?xsd=xsd2" />
+    <MetadataFile FileName="BookingHotel1.xsd" MetadataType="Schema" ID="be5bef4b-e2c7-4f5f-a067-2d6fe204ed4b" SourceId="1" SourceUrl="http://localhost:8888/BookingHotel?xsd=xsd1" />
+    <MetadataFile FileName="BookingHotel.disco" MetadataType="Disco" ID="f5fa07f5-ec7a-4b0b-af0f-db3806c38f9c" SourceId="1" SourceUrl="http://localhost:8888/BookingHotel?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="4bd35d1f-e8d8-4a10-a17a-d0308bffc2ab" SourceId="1" SourceUrl="http://localhost:8888/BookingHotel?wsdl" />
+    <MetadataFile FileName="BookingHotel2.xsd" MetadataType="Schema" ID="d60683b8-a101-4f8b-b989-8c849c187036" SourceId="1" SourceUrl="http://localhost:8888/BookingHotel?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

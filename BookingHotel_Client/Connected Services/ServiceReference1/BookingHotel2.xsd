@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8888/BookingHotel?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BookingHotel_Service" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Register">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nama" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TambahTransaksi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tgl_checkin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="nama" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ktp" type="xs:int" />
+        <xs:element minOccurs="0" name="totalhari" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TambahTransaksiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TambahTransaksiResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TambahDetailTransaksi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_trans" type="xs:int" />
+        <xs:element minOccurs="0" name="id_kamar" type="xs:int" />
+        <xs:element minOccurs="0" name="subtotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TambahDetailTransaksiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TambahDetailTransaksiResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveDetailTransaksi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_detailtrans" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveDetailTransaksiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveDetailTransaksiResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CekotTrans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_trans" type="xs:int" />
+        <xs:element minOccurs="0" name="total" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CekotTransResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CekotTransResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTrans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_trans" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTransResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BookingHotel_Service" minOccurs="0" name="GetAllTransResult" nillable="true" type="q1:ArrayOfDetailTrans" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailTransByIDTrans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_trans" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailTransByIDTransResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BookingHotel_Service" minOccurs="0" name="GetDetailTransByIDTransResult" nillable="true" type="q2:ArrayOfDetailTrans" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CekotKamar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="avaibility" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CekotKamarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CekotKamarResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8888/BookingHotel?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8888/BookingHotel?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8888/BookingHotel?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BookingHotel_Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TambahTransaksi_InputMessage">
+    <wsdl:part name="parameters" element="tns:TambahTransaksi" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TambahTransaksi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TambahTransaksiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TambahDetailTransaksi_InputMessage">
+    <wsdl:part name="parameters" element="tns:TambahDetailTransaksi" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TambahDetailTransaksi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TambahDetailTransaksiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveDetailTransaksi_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveDetailTransaksi" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RemoveDetailTransaksi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveDetailTransaksiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CekotTrans_InputMessage">
+    <wsdl:part name="parameters" element="tns:CekotTrans" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CekotTrans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CekotTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllTrans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTrans" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllTrans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDetailTransByIDTrans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailTransByIDTrans" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDetailTransByIDTrans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailTransByIDTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CekotKamar_InputMessage">
+    <wsdl:part name="parameters" element="tns:CekotKamar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CekotKamar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CekotKamarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Login" message="tns:IService1_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginResponse" message="tns:IService1_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Register" message="tns:IService1_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RegisterResponse" message="tns:IService1_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TambahTransaksi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TambahTransaksi" message="tns:IService1_TambahTransaksi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TambahTransaksiResponse" message="tns:IService1_TambahTransaksi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TambahDetailTransaksi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TambahDetailTransaksi" message="tns:IService1_TambahDetailTransaksi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TambahDetailTransaksiResponse" message="tns:IService1_TambahDetailTransaksi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDetailTransaksi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RemoveDetailTransaksi" message="tns:IService1_RemoveDetailTransaksi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RemoveDetailTransaksiResponse" message="tns:IService1_RemoveDetailTransaksi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CekotTrans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CekotTrans" message="tns:IService1_CekotTrans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CekotTransResponse" message="tns:IService1_CekotTrans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTrans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllTrans" message="tns:IService1_GetAllTrans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllTransResponse" message="tns:IService1_GetAllTrans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailTransByIDTrans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDetailTransByIDTrans" message="tns:IService1_GetDetailTransByIDTrans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDetailTransByIDTransResponse" message="tns:IService1_GetDetailTransByIDTrans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CekotKamar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CekotKamar" message="tns:IService1_CekotKamar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CekotKamarResponse" message="tns:IService1_CekotKamar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService1/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IService1/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TambahTransaksi">
+      <soap:operation soapAction="http://tempuri.org/IService1/TambahTransaksi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TambahDetailTransaksi">
+      <soap:operation soapAction="http://tempuri.org/IService1/TambahDetailTransaksi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDetailTransaksi">
+      <soap:operation soapAction="http://tempuri.org/IService1/RemoveDetailTransaksi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CekotTrans">
+      <soap:operation soapAction="http://tempuri.org/IService1/CekotTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTrans">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailTransByIDTrans">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDetailTransByIDTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CekotKamar">
+      <soap:operation soapAction="http://tempuri.org/IService1/CekotKamar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8888/BookingHotel" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

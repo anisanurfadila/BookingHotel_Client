@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6884bfac-9094-48c4-ac65-c5f6233db376" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/BookingHotel2/BookingHotel_Service.Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="eeb6481f-4e63-427f-8fae-b53138a2ceb0" SourceId="1" SourceUrl="http://desktop-8oqrtv4/BookingHotel2/BookingHotel_Service.Service1.svc?wsdl" />
+    <MetadataFile FileName="BookingHotel_Service.xsd" MetadataType="Schema" ID="ee58b59f-bc90-45a3-9f6c-5995600037a7" SourceId="1" SourceUrl="http://desktop-8oqrtv4/BookingHotel2/BookingHotel_Service.Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="BookingHotel_Service.disco" MetadataType="Disco" ID="3b0ea079-a572-44ec-b241-d863928bfaac" SourceId="1" SourceUrl="http://desktop-8oqrtv4/BookingHotel2/BookingHotel_Service.Service1.svc?disco" />
+    <MetadataFile FileName="BookingHotel_Service1.xsd" MetadataType="Schema" ID="6f3f4019-9e86-41ad-8c66-688e31920e7d" SourceId="1" SourceUrl="http://desktop-8oqrtv4/BookingHotel2/BookingHotel_Service.Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="BookingHotel_Service2.xsd" MetadataType="Schema" ID="84a3d689-d335-4fe7-a69a-44672992bd51" SourceId="1" SourceUrl="http://desktop-8oqrtv4/BookingHotel2/BookingHotel_Service.Service1.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
